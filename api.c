@@ -96,6 +96,11 @@ void handle_query(struct p0f_api_query* q, struct p0f_api_response* r) {
   if (h->language)
     strncpy((char*)r->language, (char*)h->language, P0F_STR_MAX + 1);
 
+  if (h->raw_sig)
+  {
+    strncpy((char*)r->raw_sig, (char*)h->raw_sig, P0F_SIG_MAX + 1);
+  }
+
   r->bad_sw      = h->bad_sw;
   r->last_nat    = h->last_nat;
   r->last_chg    = h->last_chg;

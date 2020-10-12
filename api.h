@@ -24,6 +24,7 @@
 #define P0F_ADDR_IPV6        0x06
 
 #define P0F_STR_MAX          31
+#define P0F_SIG_MAX          127
 
 #define P0F_MATCH_FUZZY      0x01
 #define P0F_MATCH_GENERIC    0x02
@@ -68,6 +69,7 @@ struct p0f_api_response {
   u8  link_type[P0F_STR_MAX + 1];       /* Link type                          */
 
   u8  language[P0F_STR_MAX + 1];        /* Language                           */
+  u8  raw_sig[P0F_SIG_MAX +1];          /* Human readaable signature string   */
 
 } __attribute__((packed));
 

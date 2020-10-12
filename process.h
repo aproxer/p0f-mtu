@@ -122,6 +122,7 @@ struct host_data {
   s32 last_up_min;                      /* Last computed uptime (-1 = none)   */
   u32 up_mod_days;                      /* Uptime modulo (days)               */
 
+  u8* raw_sig;                          /* Last raw signature                 */
   /* HTTP business: */
 
   struct http_sig* http_req_os;         /* Last request, if class != -1       */
