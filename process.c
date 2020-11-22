@@ -1223,6 +1223,9 @@ static void flow_dispatch(struct packet_data* pk) {
 
     case TCP_SYN | TCP_ACK:
 
+      DEBUG("[#] Disabled SYN+ACK fingerprinting.\n");
+      return;
+
       if (!f) {
 
         DEBUG("[#] Stray SYN+ACK with no flow.\n");
